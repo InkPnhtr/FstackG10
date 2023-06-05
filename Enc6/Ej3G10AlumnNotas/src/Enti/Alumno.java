@@ -1,8 +1,11 @@
 package Enti;
 
-public class Alumno {
+import java.util.*;
+
+public class Alumno
+ {
     private String Nombre;
-    private ArrayList<Integer> notas = new Arraylist<3>;
+    private ArrayList<Integer> notas;
     
 
 
