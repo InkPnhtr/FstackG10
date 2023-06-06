@@ -1,3 +1,8 @@
+
+import Enti.Alumno;
+import Serv.AlumnoServicio;
+import java.util.ArrayList;
+
 public class App {
     public static void main(String[] args) throws Exception {
         /*Crear una clase llamada Alumno que mantenga información sobre las notas de distintos
@@ -11,8 +16,12 @@ Método notaFinal(): El usuario ingresa el nombre del alumno que quiere calcular
 final y se lo busca en la lista de Alumnos. Si está en la lista, se llama al método. Dentro
 del método se usará la lista notas para calcular el promedio final de alumno. Siendo este
 promedio final, devuelto por el método y mostrado en el main. */
+        AlumnoServicio as = new AlumnoServicio();
+        ArrayList<Alumno> alumnos = as.crearListaAlumnos();
         
-        System.out.println("Hello, World!");
-        
+        for(Alumno alumno:alumnos){
+            System.out.println(alumno.toString());
+        }
+        System.out.println("El promedio del alumno es: "+ as.notaFinal(alumnos));
     }
 }

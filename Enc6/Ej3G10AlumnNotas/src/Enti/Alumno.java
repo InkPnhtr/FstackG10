@@ -15,7 +15,7 @@ con sus 3 notas. */
 
 
     
-
+    
     public Alumno(String nombre, ArrayList<Integer> notas) {
         Nombre = nombre;
         this.notas = notas;
@@ -33,6 +33,11 @@ con sus 3 notas. */
     }
     public void setNotas(ArrayList<Integer> notas) {
         this.notas = notas;
+    }
+
+    @Override
+    public String toString() {
+        return "Alumno{" + "Nombre=" + Nombre + ", notas=" + notas + '}';
     }
 
 
