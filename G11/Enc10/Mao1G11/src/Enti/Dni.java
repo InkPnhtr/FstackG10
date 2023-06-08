@@ -43,7 +43,7 @@ acceder luego a los atributos del dni de la persona creando objetos y jugando de
 
     @Override
     public String toString() {
-        return "Dni{" + "nro=" + nro + ", serie=" + serie + '}';
+        return "Dni{" + nro + ", serie=" + serie + '}';
     }
     
     

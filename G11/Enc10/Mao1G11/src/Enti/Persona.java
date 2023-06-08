@@ -50,6 +50,8 @@ acceder luego a los atributos del dni de la persona creando objetos y jugando de
     public void setDni(Dni dni) {
         this.dni = dni;
     }
+    
+    
 
     @Override
     public String toString() {
