@@ -62,7 +62,11 @@ pantalla.
         while (it.hasNext()) {
             System.out.println(it.next());
         }
-
+        System.out.println("MAyors a 1hra");
+        for (Pelicula pelicula : peliculas) {
+            if (pelicula.getDuracion() > 1) {
+                System.out.println(pelicula);
+            }
+        }
     }
-
 }
