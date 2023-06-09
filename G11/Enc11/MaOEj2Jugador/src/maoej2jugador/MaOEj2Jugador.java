@@ -5,6 +5,8 @@
  */
 package maoej2jugador;
 
+import Svcs.equiServ;
+
 /**
  *
  * @author U
@@ -16,12 +18,12 @@ public class MaOEj2Jugador {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        EJERCICIO JUGADOR
+        //EJERCICIO JUGADOR
 /*Realiza un programa en donde exista una clase Jugador que contenga nombre, apellido, posición 
 y número. Luego otra clase Equipo que contenga una colección de jugadores. Una vez hecho 
 esto, desde el main recorreremos el equipo mostrando la información de cada jugador*/
-                Arr
-                
+        equiServ es = new equiServ();
+        es.cargaYmuestraEquipo();
     }
-    
+
 }
