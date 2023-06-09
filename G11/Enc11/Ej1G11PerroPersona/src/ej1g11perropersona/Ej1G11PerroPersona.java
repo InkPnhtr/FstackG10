@@ -53,6 +53,7 @@ la clase Persona, la información del Perro y de la Persona*/
 
         for (Persona persona : p1) {
             System.out.println(persona);
+            System.out.println("");
 
         }
 
