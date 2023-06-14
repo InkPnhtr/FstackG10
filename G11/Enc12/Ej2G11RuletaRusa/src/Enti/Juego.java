@@ -11,5 +11,6 @@ package Enti;
  * @author U
  */
 public class Juego {
+    /**/
     
 }
