@@ -5,6 +5,8 @@
  */
 package ej2g11ruletarusa;
 
+import Servi.RevolverSevi;
+
 /**
  *
  * @author U
@@ -48,6 +50,13 @@ aprieta el gatillo. Sí el revolver tira el agua el jugador se moja y se termina
 moja, se pasa al siguiente jugador hasta que uno se moje. Si o si alguien se tiene que
 mojar. Al final del juego, se debe mostrar que jugador se mojó.
 Pensar la lógica necesaria para realizar esto, usando los atributos de la clase Juego.*/
+        
+        RevolverSevi rs = new RevolverSevi();
+        for (int i = 0; i < 20; i++) {
+            rs.llenarRevolver();
+            System.out.println("");
+        }
+        
         
         
         

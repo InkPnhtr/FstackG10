@@ -16,6 +16,33 @@ public class Jugador {
 jugador), nombre (Empezara con Jugador más su ID, “Jugador 1” por ejemplo) y mojado (indica 
 si está mojado o no el jugador). El número de jugadores será decidido por el usuario, pero 
 debe ser entre 1 y 6. Si no está en este rango, por defecto será 6.*/
-    HashMap<Integer, String, Boolean> Jugadores = new HashMap();
+    HashMap<Integer, String> Jugador = new HashMap();
+    boolean mojado;
+
+    public Jugador() {
+    }
+
+    public HashMap<Integer, String> getJugador() {
+        return Jugador;
+    }
+
+    public void setJugador(HashMap<Integer, String> Jugador) {
+        this.Jugador = Jugador;
+    }
+
+    public boolean isMojado() {
+        return mojado;
+    }
+
+    public void setMojado(boolean mojado) {
+        this.mojado = mojado;
+    }
+
+    @Override
+    public String toString() {
+        return "Jugador{" + "Jugador=" + Jugador + ", mojado=" + mojado + '}';
+    }
+    
+    
     
 }
