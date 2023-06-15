@@ -34,6 +34,13 @@ public class RevolverDeAgua {
     public void setPosAgua(int posAgua) {
         this.posAgua = posAgua;
     }
+
+    @Override
+    public String toString() {
+        return "RevolverDeAgua{" + "posActu=" + posActu + ", posAgua=" + posAgua + '}';
+    }
+    
+    
     
     
     

@@ -5,8 +5,6 @@
  */
 package Enti;
 
-import java.util.HashMap;
-
 /**
  *
  * @author U
@@ -23,12 +21,26 @@ debe ser entre 1 y 6. Si no está en este rango, por defecto será 6.*/
     public Jugador() {
     }
 
-    public HashMap<Integer, String> getJugador() {
-        return Jugador;
+    public Jugador(int id, String nombre, boolean mojado) {
+        this.id = id;
+        this.nombre = nombre;
+        this.mojado = mojado;
     }
 
-    public void setJugador(HashMap<Integer, String> Jugador) {
-        this.Jugador = Jugador;
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public boolean isMojado() {
@@ -41,9 +53,8 @@ debe ser entre 1 y 6. Si no está en este rango, por defecto será 6.*/
 
     @Override
     public String toString() {
-        return "Jugador{" + "Jugador=" + Jugador + ", mojado=" + mojado + '}';
+        return "Jugador{" + "id=" + id + ", nombre=" + nombre + ", mojado=" + mojado + '}';
     }
-    
     
     
 }

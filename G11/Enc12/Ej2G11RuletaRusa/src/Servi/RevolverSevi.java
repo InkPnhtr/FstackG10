@@ -27,15 +27,33 @@ deben ser aleatorios.
         System.out.println("PosAgua= "+ revolAgua.getPosAgua());
 
     }
-    public void mojar(int a, int b){
-        if (a == b){
-            revolAgua.
-            
-        }
-        
-        
+    public boolean mojar(){
+        toString();
+        return revolAgua.getPosActu() == revolAgua.getPosAgua();
     }
     
+    public void siguienteChorro(){
+        int a=revolAgua.getPosActu();
+        do{
+            a++;
+            revolAgua.setPosActu(a);
+            mostrarPosRevol();
+        }while (a<=5);
+        a=0;
+        revolAgua.setPosActu(a);
+        mostrarPosRevol();
+                
+    }
+    
+    public void mostrarPosRevol(){
+        System.out.println("PosActu= "+ revolAgua.getPosActu());
+        System.out.println("PosAgua= "+ revolAgua.getPosAgua());
+    }
+
+    @Override
+    public String toString() {
+        return "RevolverSevi{" + "revolAgua=" + revolAgua + '}';
+    }
     
     
     
