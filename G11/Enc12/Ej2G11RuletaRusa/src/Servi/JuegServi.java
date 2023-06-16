@@ -35,14 +35,24 @@ Pensar la lógica necesaria para realizar esto, usando los atributos de la clase
         int i = 1;
         do {
             Jugador jug = new Jugador();
-            System.out.print("Ing nombre Jugador" + i + "(Max=6!): ");
+            System.out.print("Ing nombre Jugador " + i + "(Max=6!): ");
             jug.setNombre(leer.next());
             jug.setId(i);
+            i ++;
             AuxJugadores.add(jug);
-            if (jug.getNombre().equalsIgnoreCase("x") || i >= 6) {
+            if (jug.getNombre().equalsIgnoreCase("x") || i > 6) {
                 b = false;
             }
         }while(b);
         jue.setJugadores(AuxJugadores);
+    }
+    public boolean ronda(){
+        RevolverSevi rs = new RevolverSevi();
+        JugServ js = new JugServ();
+        
+        rs.llenarRevolver();
+        rs.mostrarPosRevol();
+        js.disparo(rs);
+        return rs.mojar();
     }
 }

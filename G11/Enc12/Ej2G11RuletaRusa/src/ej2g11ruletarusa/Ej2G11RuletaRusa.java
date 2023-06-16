@@ -5,6 +5,7 @@
  */
 package ej2g11ruletarusa;
 
+import Servi.JuegServi;
 import Servi.RevolverSevi;
 
 /**
@@ -51,11 +52,18 @@ moja, se pasa al siguiente jugador hasta que uno se moje. Si o si alguien se tie
 mojar. Al final del juego, se debe mostrar que jugador se mojó.
 Pensar la lógica necesaria para realizar esto, usando los atributos de la clase Juego.*/
         
-        RevolverSevi rs = new RevolverSevi();
-        for (int i = 0; i < 20; i++) {
-            rs.llenarRevolver();
-            System.out.println("");
-        }
+        JuegServi ju = new JuegServi();
+        
+        ju.llenarJuego();
+        
+        ju.ronda();
+        
+//        RevolverSevi rs = new RevolverSevi();
+//        for (int i = 0; i < 20; i++) {
+//            rs.llenarRevolver();
+//            System.out.println("");
+//        }
+
         
         
         

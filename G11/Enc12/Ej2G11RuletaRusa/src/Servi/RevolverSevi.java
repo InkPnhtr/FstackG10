@@ -20,7 +20,7 @@ deben ser aleatorios.
 • toString(): muestra información del revolver (posición actual y donde está el agua)
 */
     RevolverDeAgua revolAgua = new RevolverDeAgua();
-    public void llenarRevolver(){
+    public void llenarRevolver(){ //le pone los valores de posición actual y de posición del agua
         revolAgua.setPosActu((int) (Math.random() * 6));
         System.out.println("PosActu= "+ revolAgua.getPosActu());
         revolAgua.setPosAgua((int) (Math.random() * 6));
@@ -34,11 +34,11 @@ deben ser aleatorios.
     
     public void siguienteChorro(){
         int a=revolAgua.getPosActu();
-        do{
+        if (a<5){
             a++;
             revolAgua.setPosActu(a);
             mostrarPosRevol();
-        }while (a<=5);
+        }
         a=0;
         revolAgua.setPosActu(a);
         mostrarPosRevol();

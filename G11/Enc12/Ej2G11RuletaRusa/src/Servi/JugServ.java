@@ -20,8 +20,8 @@ devuelve true, sino false.*/
     Jugador jug = new Jugador();
     public boolean disparo(RevolverSevi revolverSevi){
         if(revolverSevi.mojar()){
+            System.out.println(jug.toString() + " SE MOJO!(fin ronda");
             jug.setMojado(true);
-            revolverSevi.siguienteChorro();
             return true;
         }
         revolverSevi.siguienteChorro();
