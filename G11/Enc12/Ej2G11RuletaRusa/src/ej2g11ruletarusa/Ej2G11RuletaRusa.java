@@ -59,12 +59,13 @@ Pensar la lógica necesaria para realizar esto, usando los atributos de la clase
         while (ju.ronda()) {
             System.out.println(ju.ronda());
         }
+        System.out.println(ju.pasarArrayGanador().getJugadores().toString() + "QUEDO SEQUE!");
+
 //        RevolverSevi rs = new RevolverSevi();
 //        for (int i = 0; i < 20; i++) {
 //            rs.llenarRevolver();
 //            System.out.println("");
 //        }
-
     }
 
 }

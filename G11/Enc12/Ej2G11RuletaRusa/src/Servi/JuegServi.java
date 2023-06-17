@@ -39,7 +39,7 @@ Pensar la lógica necesaria para realizar esto, usando los atributos de la clase
             jug.setNombre(leer.next());
             jug.setId(i);
             i++;
-            if (jug.getNombre().equalsIgnoreCase("x") || i > 6) {
+            if (jug.getNombre().equalsIgnoreCase("x") || i > 7) {
                 b = false;
                 break;
             }
@@ -66,6 +66,10 @@ Pensar la lógica necesaria para realizar esto, usando los atributos de la clase
             System.out.println(jue.getJugadores());
         }
         System.out.println(jue.getJugadores().size());
-        return (jue.getJugadores().size()) >= 2;
+        return (jue.getJugadores().size()) > 1;
+    }
+    
+    public Juego pasarArrayGanador (){
+        return jue;
     }
 }
