@@ -33,26 +33,39 @@ Pensar la lógica necesaria para realizar esto, usando los atributos de la clase
     public void llenarJuego() {
         boolean b = true;
         int i = 1;
-        do {
+        while (b) {
             Jugador jug = new Jugador();
             System.out.print("Ing nombre Jugador " + i + "(Max=6!): ");
             jug.setNombre(leer.next());
             jug.setId(i);
-            i ++;
-            AuxJugadores.add(jug);
+            i++;
             if (jug.getNombre().equalsIgnoreCase("x") || i > 6) {
                 b = false;
+                break;
             }
-        }while(b);
+            AuxJugadores.add(jug);
+        }
         jue.setJugadores(AuxJugadores);
+        System.out.println(jue.getJugadores());
     }
-    public boolean ronda(){
+
+    public boolean ronda() {
         RevolverSevi rs = new RevolverSevi();
         JugServ js = new JugServ();
-        
+
         rs.llenarRevolver();
-        rs.mostrarPosRevol();
-        js.disparo(rs);
-        return rs.mojar();
+        boolean x=false;
+        while (!x) {
+            for (Jugador AuxJugadore : jue.getJugadores()) {
+                x = js.disparo(rs, AuxJugadore);
+                if (x){
+                    jue.getJugadores().remove(AuxJugadore);
+                    break;
+                }
+            }
+            System.out.println(jue.getJugadores());
+        }
+        System.out.println(jue.getJugadores().size());
+        return (jue.getJugadores().size()) >= 2;
     }
 }
