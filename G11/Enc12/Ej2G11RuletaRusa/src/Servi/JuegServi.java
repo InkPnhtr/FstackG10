@@ -35,7 +35,12 @@ Pensar la lógica necesaria para realizar esto, usando los atributos de la clase
         int i = 1;
         while (b) {
             Jugador jug = new Jugador();
-            System.out.print("Ing nombre Jugador " + i + "(Max=6!): ");
+            System.out.print("Ing nombre Jugador " + i + "(Max=6 ing x para finalizar)"
+                    + ""
+                    + ""
+                    + ""
+                    + ""
+                    +  : ");
             jug.setNombre(leer.next());
             jug.setId(i);
             i++;
