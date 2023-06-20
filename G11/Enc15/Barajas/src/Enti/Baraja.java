@@ -10,5 +10,8 @@ package Enti;
  * @author U
  */
 public class Baraja {
+    private int nro;
+    private String palo;
+    
     
 }
