@@ -3,20 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Enti;
+package Mao1G12;
 
 /**
  *
  * @author U
  */
-public class Baraja {
-    private Integer nro;
-    private String palo;
-
-    public Baraja(Integer nro, String palo) {
-        this.nro = nro;
-        this.palo = palo;
+public class Gato extends Animal{
+    
+    @Override 
+    
+    public void hacerRuido(){
+        System.out.println("Miau");
     }
     
-
+    
 }
