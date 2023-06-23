@@ -1,0 +1,130 @@
+- CLASES -
+
+package entidades;
+
+public class Animal {
+    
+    protected String nombre;
+    protected String alimento; 
+    protected int edad;
+    protected String raza; 
+
+    public Animal(String nombre, String alimento, int edad, String raza) {
+        this.nombre = nombre;
+        this.alimento = alimento;
+        this.edad = edad;
+        this.raza = raza;
+    }
+
+    public void Alimentacion(){
+        System.out.println(this.nombre + "se alimenta de" + this.alimento);
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getAlimento() {
+        return alimento;
+    }
+
+    public void setAlimento(String alimento) {
+        this.alimento = alimento;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public String getRaza() {
+        return raza;
+    }
+
+    public void setRaza(String raza) {
+        this.raza = raza;
+    }
+    
+    
+   
+    
+}
+
+___________________
+
+package entidades;
+
+public class Caballo extends Animal{
+    
+    public Caballo(String nombre, String alimento, int edad, String raza) {
+        super(nombre, alimento, edad, raza);
+    }
+    
+   
+    }
+
+______________
+
+
+package entidades;
+
+public class Perro extends Animal{
+    
+    public Perro(String nombre, String alimento, int edad, String raza) {
+        super(nombre, alimento, edad, raza);
+    }
+    
+}
+___________________
+
+package entidades;
+
+
+public class Gato extends Animal {
+    
+    public Gato(String nombre, String alimento, int edad, String raza) {
+        super(nombre, alimento, edad, raza);
+    }
+    
+}
+________________
+ 
+MAIN
+
+package main;
+
+import entidades.Animal;
+import entidades.Caballo;
+import entidades.Gato;
+import entidades.Perro;
+
+public class Main {
+
+    public static void main(String[] args) {
+       
+        //Crear perros:
+        Animal perro1 = new Perro ("Chiquito", "carne", 8, "bulldog");
+        perro1.Alimentacion();
+        Animal perro2 = new Perro ("Blanca", "alimento balanceado", 5, "caniche");
+        perro2.Alimentacion();
+        
+        //Crear gatos:
+        Animal gato1 = new Gato ("Kike", "croquetas", 18, "tuxedo");
+        gato1.Alimentacion();
+        Animal gato2 = new Gato ("Manchas", "wiskas", 6, "blanco");
+        
+        //Crear caballo
+        Animal caballo1 = new Caballo ("Tornado", "pasto", 8, "negrito");
+        caballo1.Alimentacion();
+       
+        
+    }
+    
+}
