@@ -10,6 +10,7 @@ package Enti;
  * @author U
  */
 public class Baraja {
+<<<<<<< HEAD
     private Integer nro;
     private String palo;
 
@@ -17,6 +18,11 @@ public class Baraja {
         this.nro = nro;
         this.palo = palo;
     }
+=======
+    private int nro;
+    private String palo;
+    
+>>>>>>> f4b7709a29a04df79ee089093f260d48a09d16c3
     
 
 }
