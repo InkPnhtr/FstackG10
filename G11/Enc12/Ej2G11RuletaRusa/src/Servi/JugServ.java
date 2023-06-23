@@ -23,7 +23,7 @@ devuelve true, sino false.*/
             System.out.println(jug.toString() + " SE MOJO!(fin ronda)");
             jug.setMojado(true);
             System.out.println(jug.toString());
-            revolverSevi.siguienteChorro();
+            //revolverSevi.siguienteChorro();
             return true;
         } else {
             System.out.println(jug.toString());

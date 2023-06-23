@@ -50,26 +50,28 @@ Pensar la lógica necesaria para realizar esto, usando los atributos de la clase
     }
 
     public boolean ronda() {
-        RevolverSevi rs = new RevolverSevi();
-        JugServ js = new JugServ();
+        while ((jue.getJugadores().size()) > 1) {
+            RevolverSevi rs = new RevolverSevi();
+            JugServ js = new JugServ();
 
-        rs.llenarRevolver();
-        boolean x=false;
-        while (!x) {
-            for (Jugador AuxJugadore : jue.getJugadores()) {
-                x = js.disparo(rs, AuxJugadore);
-                if (x){
-                    jue.getJugadores().remove(AuxJugadore);
-                    break;
+            rs.llenarRevolver();
+            boolean x = false;
+            while (!x) {
+                for (Jugador AuxJugadore : jue.getJugadores()) {
+                    x = js.disparo(rs, AuxJugadore);
+                    if (x) {
+                        jue.getJugadores().remove(AuxJugadore);
+                        break;
+                    }
                 }
+                System.out.println(jue.getJugadores());
             }
-            System.out.println(jue.getJugadores());
+            System.out.println(jue.getJugadores().size());
         }
-        System.out.println(jue.getJugadores().size());
         return (jue.getJugadores().size()) > 1;
     }
-    
-    public Juego pasarArrayGanador (){
+
+    public Juego pasarArrayGanador() {
         return jue;
     }
 }
