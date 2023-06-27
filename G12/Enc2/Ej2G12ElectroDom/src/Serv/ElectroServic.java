@@ -51,5 +51,7 @@ Entre 20 y 49 kg $500
 Entre 50 y 79 kg $800
 Mayor que 80 kg $1000
     */
-protected float precioFinal(float prec)    
+protected float precioFinal(float preci){
+    
+    }
 }
