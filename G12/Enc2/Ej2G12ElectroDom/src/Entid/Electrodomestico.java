@@ -59,14 +59,14 @@ Los métodos a implementar son:
 • Método comprobarConsumoEnergetico(char letra): comprueba que la letra es correcta,
 sino es correcta usara la letra F por defecto. Este método se debe invocar al crear el
 objeto y no será visible.*/
-    private void comprobarConsumoEnergetico(char letra) {
+    private void comprobarConsumoEnergetico (char letra) {
         boolean e = false;
-        String x = "C";
+        // String x = "C";
         String a = "abcdefABCDEF";
         for (int i = 0; i < a.length(); i++) {
-            System.out.println(a.charAt(i));
-            if ((a.charAt(i)) == (x.charAt(0))) {
-                System.out.println("true");
+            //System.out.println(a.charAt(i));
+            if ((a.charAt(i)) == letra {
+                System.out.print(letra);("cons Energ = true");
                 e = true;
             }
         }
