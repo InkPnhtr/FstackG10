@@ -5,6 +5,8 @@
  */
 package Entid;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author U
@@ -79,10 +81,18 @@ objeto y no será visible.*/
     /*• Método comprobarColor(String color): comprueba que el color es correcto, y si no lo es,
 usa el color blanco por defecto. Los colores disponibles para los electrodomésticos son
 blanco, negro, rojo, azul y gris. No importa si el nombre está en mayúsculas o en
-minúsculas. Este método se invocará al crear el objeto y no será visible.
-
-13
-
+minúsculas. Este método se invocará al crear el objeto y no será visible.*/
+    
+    private void comprobarColor (String color){
+        //ArrayList<String> colores = new ArrayList<>();
+        String colores[] = {"blanco", "negro", "rojo", "azul" , "gris"};
+        for (String colore : colores) {
+            if (colore.equalsIgnoreCase(color)){
+                this.color = "blanco";
+            }
+        }
+    }
+/*13
 • Metodo crearElectrodomestico(): le pide la información al usuario y llena el
 electrodoméstico, también llama los métodos para comprobar el color y el consumo. Al
 precio se le da un valor base de $1000.
