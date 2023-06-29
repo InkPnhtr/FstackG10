@@ -14,28 +14,27 @@ import java.util.Scanner;
  */
 public class ElectroServic {
 
-    
-    
-    final float precioBase = 1000;
+    final double precioBase = 1000.2;
     Electrodomestico elec1 = new Electrodomestico();
     Scanner leer = new Scanner(System.in).useDelimiter("\n");
 
     public ElectroServic() {
     }
-    
-    protected void crearElectrodomestico(){
-        System.out.println("Ing Precio: = 1000");
-        elec1.setPrecio(precioBase);
+
+    public void crearElectrodomestico() {
+        System.out.print("Ing Peso: ");
+        elec1.setPeso(leer.nextInt());
         System.out.print("Ing Color: ");
         elec1.setColor(leer.next());
-        System.out.print("Ing Cons. Energ.: ");
+        System.out.print("Ing Cons. Energ.(A-F): ");
         elec1.setConsumoEnergetico(leer.next().charAt(0));
+        System.out.println("Ing Precio: = 1000");
+        elec1.setPrecio(precioFinal(elec1.getPeso()));
+        
+        System.out.println("Precio Final Prueba = " + precioFinal(elec1.getPeso()));
     }
-    
-    
-    
-    
-/*• Método precioFinal(): según el consumo energético y su tamaño, aumentará el valor del
+
+    /*• Método precioFinal(): según el consumo energético y su tamaño, aumentará el valor del
 precio. Esta es la lista de precios:
     LETRA PRECIO
 A $1000
@@ -50,8 +49,12 @@ Entre 1 y 19 kg $100
 Entre 20 y 49 kg $500
 Entre 50 y 79 kg $800
 Mayor que 80 kg $1000
-    */
-protected float precioFinal(float preci){
-    
+     */
+    protected double precioFinal(int peso) {
+        if (peso > 0 && peso < 20) {
+            return precioBase + 100 + elec1.comprobarConsumoEnergetico(elec1.getConsumoEnergetico());
+        }
+        return 888;
     }
+
 }

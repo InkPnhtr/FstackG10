@@ -20,27 +20,38 @@ Los constructores que se deben implementar son los siguientes:
 • Un constructor con todos los atributos pasados por parámetro.
 Los métodos a implementar son:
 • Métodos getters y setters de todos los atributos.*/
-    protected float precio;
+    protected double precio;
+    protected int peso;
     protected String color;
     protected char consumoEnergetico;
 
     public Electrodomestico() {
     }
 
-    public Electrodomestico(float precio, String color, char consumoEnergetico) {
+    public Electrodomestico(double precio, int peso, String color, char consumoEnergetico) {
         this.precio = precio;
+        this.peso = peso;
         this.color = color;
         this.consumoEnergetico = consumoEnergetico;
     }
 
-    public float getPrecio() {
+    public double getPrecio() {
         return precio;
     }
 
-    public void setPrecio(float precio) {
+    public void setPrecio(double precio) {
         this.precio = precio;
     }
 
+    public int getPeso() {
+        return peso;
+    }
+
+    public void setPeso(int peso) {
+        this.peso = peso;
+    }
+
+    
     public String getColor() {
         return color;
     }
@@ -61,38 +72,42 @@ Los métodos a implementar son:
 • Método comprobarConsumoEnergetico(char letra): comprueba que la letra es correcta,
 sino es correcta usara la letra F por defecto. Este método se debe invocar al crear el
 objeto y no será visible.*/
-    private void comprobarConsumoEnergetico(char letra) {
+    public int comprobarConsumoEnergetico(char letra) {
         boolean e = false;
+        int i;
         String x = "C";
         String a = "abcdefABCDEF";
-        for (int i = 0; i < a.length(); i++) {
-            System.out.println(a.charAt(i));
-            if ((a.charAt(i)) == (x.charAt(0))) {
-                System.out.println("true");
-                e = true;
+        int b[] = {1000, 800, 600, 500, 300, 100, 1000, 800, 600, 500, 300, 100};
+        for (i = 0; i < a.length(); i++) {
+            System.out.println(a.charAt(i)+" "+ i);
+            if ((a.charAt(i)) == (letra)) {
+                System.out.println("true: letra valida! recargo = $"+ b[i]);
+                //e = true;
+                return b[i];
             }
         }
         if (!e) {
             this.consumoEnergetico = "F".charAt(0);
             System.out.println("Consumo Enerj invalido Default = " + this.consumoEnergetico);
+            return 1000;
         }
+        return b[i];
     }
 
     /*• Método comprobarColor(String color): comprueba que el color es correcto, y si no lo es,
 usa el color blanco por defecto. Los colores disponibles para los electrodomésticos son
 blanco, negro, rojo, azul y gris. No importa si el nombre está en mayúsculas o en
 minúsculas. Este método se invocará al crear el objeto y no será visible.*/
-    
-    private void comprobarColor (String color){
+    private void comprobarColor(String color) {
         //ArrayList<String> colores = new ArrayList<>();
-        String colores[] = {"blanco", "negro", "rojo", "azul" , "gris"};
+        String colores[] = {"blanco", "negro", "rojo", "azul", "gris"};
         for (String colore : colores) {
-            if (colore.equalsIgnoreCase(color)){
+            if (colore.equalsIgnoreCase(color)) {
                 this.color = "blanco";
             }
         }
     }
-/*13
+    /*13
 • Metodo crearElectrodomestico(): le pide la información al usuario y llena el
 electrodoméstico, también llama los métodos para comprobar el color y el consumo. Al
 precio se le da un valor base de $1000.

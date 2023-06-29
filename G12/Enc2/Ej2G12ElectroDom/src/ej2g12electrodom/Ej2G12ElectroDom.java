@@ -5,6 +5,8 @@
  */
 package ej2g12electrodom;
 
+import Serv.ElectroServic;
+
 /**
  *
  * @author U
@@ -16,6 +18,11 @@ public class Ej2G12ElectroDom {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        ElectroServic es1 = new ElectroServic();
+        
+        es1.crearElectrodomestico();
+        
         /*2. Crear una superclase llamada Electrodoméstico con los siguientes atributos: precio, color,
 consumo energético (letras entre A y F) y peso.
 Los constructores que se deben implementar son los siguientes:
@@ -91,6 +98,9 @@ también deben afectar al precio.
 Finalmente, en el main debemos realizar lo siguiente:
 Vamos a crear una Lavadora y un Televisor y llamar a los métodos necesarios para mostrar
 el precio final de los dos electrodomésticos.*/
+        
+        
+        
     }
     
 }
