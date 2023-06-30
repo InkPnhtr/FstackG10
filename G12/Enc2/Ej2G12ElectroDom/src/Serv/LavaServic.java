@@ -28,15 +28,14 @@ visto en la clase Electrodoméstico también deben afectar al precio.*/
     public void crearLavadora() {
         
         System.out.println("LAVADORA:");
-
         crearElectrodomestico();
+        lav1.setPeso(elec1.getPeso());
         System.out.print("Ing carga: (r>30Kg)");
         lav1.setCarga(leer.nextInt());
         
-        System.out.println("Peso = "+ lav1.getPeso());
         
         System.out.println("El precio de la Lav = "+ precioFinal(lav1.getPeso()));
-        
+       
 
     }
 

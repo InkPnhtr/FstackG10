@@ -29,13 +29,14 @@ también deben afectar al precio.
     public void crearTelevisor() {
         System.out.println("TELE: ");
         crearElectrodomestico();
+        t1.setPeso(elec1.getPeso());
+        
         System.out.print("Ing Resolucion en pulg. : ");
         t1.setResolución(leer.nextInt());
         System.out.print("Tiene Sint. TDT (s/n) ? : ");
         if (leer.next().equalsIgnoreCase("s")) {
             t1.setSintTDT(true);
         }
-        System.out.println("Peso = "+ t1.getPeso());
         System.out.println("El precio de la Tele1 = "+ precioFinal(t1.getPeso()));
         
         

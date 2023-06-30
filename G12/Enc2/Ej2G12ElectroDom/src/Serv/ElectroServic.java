@@ -33,7 +33,6 @@ public class ElectroServic {
 
         //System.out.println("Precio Final Prueba = " + precioFinal(elec1.getPeso()));
         elec1.comprobarColor(elec1.getColor());
-        System.out.println("Peso = "+ elec1.getPeso());
 
         System.out.println("color electrodomestico = " + elec1.getColor());
     }
