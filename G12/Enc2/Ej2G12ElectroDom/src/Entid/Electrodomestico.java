@@ -79,16 +79,16 @@ objeto y no será visible.*/
         String a = "abcdefABCDEF";
         int b[] = {1000, 800, 600, 500, 300, 100, 1000, 800, 600, 500, 300, 100};
         for (i = 0; i < a.length(); i++) {
-            System.out.println(a.charAt(i)+" "+ i);
+            //System.out.println(a.charAt(i)+" "+ i);
             if ((a.charAt(i)) == (letra)) {
-                System.out.println("true: letra valida! recargo = $"+ b[i]);
+                System.out.println("true: letra valida!" + this.consumoEnergetico + " recargo = $"+ b[i]);
                 //e = true;
                 return b[i];
             }
         }
         if (!e) {
             this.consumoEnergetico = "F".charAt(0);
-            System.out.println("Consumo Enerj invalido Default = " + this.consumoEnergetico);
+            System.out.println("Consumo Enerj invalido Default (+$ 1000!) = " + this.consumoEnergetico);
             return 1000;
         }
         return b[i];
@@ -98,13 +98,17 @@ objeto y no será visible.*/
 usa el color blanco por defecto. Los colores disponibles para los electrodomésticos son
 blanco, negro, rojo, azul y gris. No importa si el nombre está en mayúsculas o en
 minúsculas. Este método se invocará al crear el objeto y no será visible.*/
-    private void comprobarColor(String color) {
+    public void comprobarColor(String color) {
+        boolean flag = true;
         //ArrayList<String> colores = new ArrayList<>();
         String colores[] = {"blanco", "negro", "rojo", "azul", "gris"};
         for (String colore : colores) {
             if (colore.equalsIgnoreCase(color)) {
-                this.color = "blanco";
+                flag = false;
             }
+        }
+        if (flag){
+            this.color = "blanco";
         }
     }
     /*13
