@@ -1,0 +1,68 @@
+6029772cafalug
+1243
+Random random = new Random();
+        Scanner leer = new Scanner(System.in).useDelimiter("\n");
+        int numeroUsuario = 0;
+        int numeroPc = random.nextInt(1, 500);
+        System.out.println("numeroPc = " + numeroPc);
+        int i = 0;
+
+        do {
+            System.out.println("Ingrese un numero");
+            i++;
+            try {
+                System.out.println();
+                numeroUsuario = leer.nextInt();
+
+                if (numeroUsuario < numeroPc) {
+                    System.out.println("El numero es mayor");
+                } else if (numeroUsuario == numeroPc) {
+                    System.out.println("Has adivinado!!");
+                    break;
+                } else {
+                    System.out.println("El numero es menor");
+                }
+} catch (InputMismatchException e) {
+                System.out.println("Dato incorrecto " + e.getMessage());
+                            leer.next();
+
+            }
+//            numeroUsuario = 0;
+            System.out.println("Intentos realizados: " + i);
+            System.out.println("numeroUsuario = " + numeroUsuario);
+        } while (numeroUsuario != numeroPc);
+    }
+}
+
+
+cristian hoffmann
+
+cristian hoffmann
+Facilitador/a
+MB
+
+moises barrientos
+HM
+
+HERNAN MANERA
+MB
+
+MARIANO BENEGAS
+guadalupe luján juárez
+
+guadalupe luján juárez
+WM
+
+wilson martinez
+alejandra reynoso
+
+alejandra reynoso
+NO
+
+Norberto Otero
+JL
+
+JOEL LUQUEZ
+SL
+
+SOLEDAD LEIVA
